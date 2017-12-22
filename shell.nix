@@ -4,8 +4,9 @@ let
 
   inherit (nixpkgs) pkgs;
 
-  f = { mkDerivation, base, cairo, gtk, hint, microlens-platform
-      , optparse-applicative, protolude, stdenv
+  f = { mkDerivation, base, cairo, diagrams-cairo, diagrams-core
+      , diagrams-gtk, diagrams-lib, gtk, hint, lens, optparse-applicative
+      , protolude, stdenv
       }:
       mkDerivation {
         pname = "pixra";
@@ -14,8 +15,8 @@ let
         isLibrary = false;
         isExecutable = true;
         executableHaskellDepends = [
-          base cairo gtk hint microlens-platform optparse-applicative
-          protolude
+          base cairo diagrams-cairo diagrams-core diagrams-gtk diagrams-lib
+          gtk hint lens optparse-applicative protolude
         ];
         description = "A live editing environment for pictures";
         license = stdenv.lib.licenses.agpl3;

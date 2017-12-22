@@ -24,8 +24,12 @@ executable pixra
                      , cairo
                      , gtk
                      , optparse-applicative
-                     , microlens-platform
                      , hint
+                     , diagrams-core
+                     , diagrams-lib
+                     , diagrams-gtk
+                     , diagrams-cairo
+                     , lens
   default-extensions:  NoImplicitPrelude
                      , OverloadedStrings
   hs-source-dirs:      src
